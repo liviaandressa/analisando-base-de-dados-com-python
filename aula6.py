@@ -39,3 +39,13 @@ print(tabela_faturamento)
 tabela_lojas = tabela_total.groupby('Loja').sum()
 tabela_lojas = tabela_lojas[['Faturamento']].sort_values(by="Faturamento", ascending=False)
 print(tabela_lojas)
+
+
+'''---------------------------------------------------------------'''
+
+#criando gráfico de faturamento das lojas
+
+import plotly.express as px
+
+grafico = px.bar(tabela_lojas, x=tabela_lojas.index, y='Faturamento')
+grafico.show()
