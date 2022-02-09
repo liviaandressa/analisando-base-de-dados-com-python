@@ -43,7 +43,7 @@ print(tabela_lojas)
 
 '''---------------------------------------------------------------'''
 
-#criando gráfico de faturamento das lojas
+#criando gráfico de faturamento de cada loja
 
 import plotly.express as px
 
