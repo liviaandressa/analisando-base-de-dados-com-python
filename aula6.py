@@ -30,3 +30,12 @@ tabela_total['Faturamento'] = tabela_total['Quantidade Vendida'] * tabela_total[
 tabela_faturamento = tabela_total.groupby('Produto').sum()
 tabela_faturamento = tabela_faturamento[['Faturamento']].sort_values(by="Faturamento", ascending=False) 
 print(tabela_faturamento)
+
+
+'''---------------------------------------------------------------'''
+
+#calculando loja que mais faturou
+
+tabela_lojas = tabela_total.groupby('Loja').sum()
+tabela_lojas = tabela_lojas[['Faturamento']].sort_values(by="Faturamento", ascending=False)
+print(tabela_lojas)
