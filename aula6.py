@@ -21,4 +21,12 @@ tabela_produtos = tabela_produtos[['Quantidade Vendida', 'Preco Unitario']].sort
 print(tabela_produtos)
 #display(tabela_produtos)
 
+'''---------------------------------------------------------------'''
 
+#calculando produto que mais faturou
+
+tabela_total['Faturamento'] = tabela_total['Quantidade Vendida'] * tabela_total['Preco Unitario']
+
+tabela_faturamento = tabela_total.groupby('Produto').sum()
+tabela_faturamento = tabela_faturamento[['Faturamento']].sort_values(by="Faturamento", ascending=False) 
+print(tabela_faturamento)
